@@ -20,6 +20,33 @@ a{color:#0E3B43}a:hover{color:#16707A}
 input,select{font-family:inherit}
 </style>
 <style>html{scroll-behavior:smooth} *{box-sizing:border-box} input,select,button{max-width:100%} @media (max-width:600px){h1{font-size:38px !important} h2{font-size:28px !important} section > div[style*="padding: 48px 40px"]{padding:32px 22px !important}}</style>
+<script>
+/* Sign-in links from the Touristplus app land here: hand the session back to the app. */
+(function () {
+  var h = location.hash || '';
+  var ok = /access_token=/.test(h), bad = /error_description=/.test(h);
+  if (!ok && !bad) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    var d = document.createElement('div');
+    d.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#0E3B43;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;font-family:system-ui,-apple-system,sans-serif;text-align:center;padding:24px';
+    var t = document.createElement('div'); t.style.cssText = 'font-size:26px;font-weight:800'; t.textContent = 'Touristplus';
+    var m = document.createElement('div'); m.style.cssText = 'font-size:18px;line-height:1.7';
+    d.appendChild(t); d.appendChild(m);
+    if (ok) {
+      m.innerHTML = 'تم تأكيد الإيميل ✅<br>Email confirmed';
+      var a = document.createElement('a'); a.href = 'touristplus://auth-callback' + h;
+      a.style.cssText = 'background:#F2994A;color:#fff;padding:14px 30px;border-radius:14px;font-weight:700;text-decoration:none;font-size:17px';
+      a.textContent = 'افتح التطبيق · Open the app';
+      var e = document.createElement('a'); e.href = 'exp://172.20.10.3:8081/--/auth-callback' + h;
+      e.style.cssText = 'color:#BFE9E4;font-size:14px'; e.textContent = 'فتح في Expo Go (نسخة تجريبية)';
+      d.appendChild(a); d.appendChild(e);
+    } else {
+      m.innerHTML = 'الرابط منتهي أو مستخدم — اطلب رابط جديد من التطبيق<br>This link has expired — request a new one in the app';
+    }
+    document.body.appendChild(d);
+  });
+})();
+</script>
 </head>
 <body>
 <div dir="ltr" style="font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #10272B; background: #F6F2EA; width: 100%; line-height: 1.6">
