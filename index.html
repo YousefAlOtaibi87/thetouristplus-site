@@ -1,309 +1,121 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Touristplus — اطلب رحلتك وشركاؤنا يوفّرون أفضل الأسعار</title>
-<meta name="description" content="منصة مناقصات السفر في الكويت: أرسل طلب رحلتك واستقبل عروض من مكاتب سفر مرخّصة، قارن واحجز من مكان واحد.">
-<meta property="og:title" content="Touristplus — اطلب رحلتك وشركاؤنا يوفّرون أفضل الأسعار">
-<meta property="og:description" content="منصة مناقصات السفر في الكويت: أرسل طلب رحلتك واستقبل عروض من مكاتب سفر مرخّصة، قارن واحجز من مكان واحد.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#0E3B43">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheTouristPlus — اطلب رحلتك، وشركاؤنا يوفّرون أفضل الأسعار</title>
+<meta name="description" content="منصة مناقصات السفر في الكويت: أرسل طلب رحلتك واستقبل عروض من شركاء سفر موثّقين، قارن واحجز من مكان واحد.">
+<meta property="og:title" content="TheTouristPlus — اطلب رحلتك، وشركاؤنا يوفّرون أفضل الأسعار"><meta property="og:description" content="منصة مناقصات السفر في الكويت: أرسل طلب رحلتك واستقبل عروض من شركاء سفر موثّقين، قارن واحجز من مكان واحد."><meta property="og:type" content="website">
+<meta name="theme-color" content="#0B3D91">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="ar" href="https://thetouristplus.com/">
-<link rel="alternate" hreflang="en" href="https://thetouristplus.com/en.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="ar" href="https://thetouristplus.com/"><link rel="alternate" hreflang="en" href="https://thetouristplus.com/en.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F6F2EA}
-a{color:#0E3B43}a:hover{color:#16707A}
-input,select{font-family:inherit}
+:root{--blue:#0B3D91;--blue2:#14509F;--red:#C0392B;--salmon:#E8A598;--ink:#0F172A;--mist:#F1F5F9;--line:#E2E8F0;--muted:#64748B;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"IBM Plex Sans Arabic",system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img,svg{display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.logo{display:inline-flex;align-items:center;gap:10px}.logo .mark{width:40px;height:40px}
+.word{font-size:22px;letter-spacing:-.3px;line-height:1}.word b{font-weight:700;color:var(--blue)}.word i{font-style:normal;font-weight:700;color:var(--red)}
+.logo.light .word b{color:#fff}.logo.light .word i{color:var(--salmon)}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:28px;height:72px}
+nav{display:flex;gap:24px;font-weight:500;color:#334155;font-size:15px}nav a:hover{color:var(--blue)}
+.hspace{flex:1}.hact{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:12px;font-weight:600;font-size:15px;border:1.5px solid transparent;transition:.15s;white-space:nowrap}
+.btn.primary{background:var(--blue);color:#fff}.btn.primary:hover{background:var(--blue2)}
+.btn.ghost{border-color:var(--line);color:var(--ink)}.btn.ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn.white{background:#fff;color:var(--blue)}.btn.outline-w{border-color:rgba(255,255,255,.45);color:#fff}.btn.outline-w:hover{background:rgba(255,255,255,.1)}
+.lang{font-weight:600;color:var(--muted);font-size:14px}
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#1a5cc0 0,transparent 60%),var(--blue);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:80px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.3px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:#DBE7FF}
+h1{font-size:54px;line-height:1.2;margin:18px 0 0;font-weight:700;letter-spacing:-.5px}h1 span{color:var(--salmon)}
+.redline{width:96px;height:4px;border-radius:4px;background:var(--red);margin:22px 0}
+.lead{font-size:18px;color:#DBE7FF;max-width:560px;margin:0}
+.tag{font-size:12px;letter-spacing:4px;color:#9DB5E0;margin-top:26px;direction:ltr;text-align:start}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.store{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 18px;border-radius:12px;background:#0F172A;color:#fff;border:1px solid rgba(255,255,255,.18)}
+.store small{display:block;font-size:11px;color:#94A3B8;line-height:1.1}.store b{display:block;font-size:16px;line-height:1.2}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:#DBE7FF;font-size:14px}.trust span::before{content:"✓";color:var(--salmon);font-weight:700;margin-inline-end:6px}
+.phone{justify-self:center;width:300px;border-radius:40px;background:#0F172A;padding:12px;box-shadow:0 40px 80px rgba(3,15,40,.45)}
+.screen{border-radius:30px;background:var(--mist);overflow:hidden;color:var(--ink)}
+.sbar{background:var(--blue);color:#fff;padding:22px 18px 18px}.sbar b{font-size:18px;display:block}.sbar small{color:#C7D7F5}
+.sbody{padding:14px;display:grid;gap:10px}.pill{justify-self:start;font-size:12px;font-weight:600;color:var(--blue);background:#DBE7FF;border-radius:999px;padding:3px 10px}
+.offer{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.offer.best{border:2px solid var(--blue)}.offer h4{margin:0;font-size:14px}.offer p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.price{font-weight:700;font-size:17px;color:var(--blue);white-space:nowrap}.badge{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:var(--red);border-radius:6px;padding:1px 6px;margin-inline-start:6px;vertical-align:middle}
+section{padding:96px 0}.alt{background:var(--mist)}
+.kicker{color:var(--red);font-weight:700;font-size:14px;letter-spacing:.3px}
+h2{font-size:38px;line-height:1.25;margin:8px 0 12px;letter-spacing:-.3px}.sub{color:var(--muted);font-size:17px;max-width:620px;margin:0}
+.center{text-align:center}.center .sub{margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
+.num{width:40px;height:40px;border-radius:12px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:14px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:15px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.feat{padding:18px;border-radius:16px;background:var(--mist)}.alt .feat{background:#fff;border:1px solid var(--line)}
+.feat h3{margin:0 0 4px;font-size:16px;color:var(--blue)}.feat p{margin:0;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}.chip{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:500}
+.dark{background:var(--ink);color:#fff}.dark .sub{color:#94A3B8}.dark .feat{background:#1E293B}.dark .feat h3{color:#fff}.dark .feat p{color:#94A3B8}.dark .kicker{color:var(--salmon)}
+.dash{background:#1E293B;border-radius:20px;padding:18px;border:1px solid #334155}
+.drow{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:12px;background:#0F172A;margin-top:10px;font-size:14px}.drow small{color:#94A3B8;display:block}
+.tagr{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:#DBE7FF;color:var(--blue)}.tagr.new{background:var(--red);color:#fff}
+.faq{max-width:780px;margin:36px auto 0}details{border-bottom:1px solid var(--line);padding:18px 4px}summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}details[open] summary::after{content:"–"}details p{color:var(--muted);margin:10px 0 0}
+.cta{background:var(--blue);color:#fff;border-radius:28px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{margin:0;color:#fff}.cta p{margin:6px 0 0;color:#DBE7FF}
+footer{background:var(--ink);color:#CBD5E1;padding:56px 0 28px;font-size:15px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}.fgrid h4{color:#fff;margin:0 0 12px;font-size:15px}.fgrid a{display:block;margin:6px 0;color:#CBD5E1}.fgrid a:hover{color:#fff}
+.fbot{border-top:1px solid #1E293B;margin-top:36px;padding-top:20px;color:#64748B;font-size:13px}
+@media (max-width:900px){nav{display:none}.hero .wrap,.split{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}h1{font-size:40px}h2{font-size:30px}.phone{width:270px}.hact .ghost{display:none}}
+@media (max-width:560px){.steps,.feats{grid-template-columns:1fr}section{padding:64px 0}.cta{padding:32px}.word{font-size:19px}.hact .btn.primary{display:none}h1{font-size:34px}}
 </style>
-<style>html{scroll-behavior:smooth} *{box-sizing:border-box} input,select,button{max-width:100%} @media (max-width:600px){h1{font-size:38px !important} h2{font-size:28px !important} section > div[style*="padding: 48px 40px"]{padding:32px 22px !important}}</style>
 <script>
-/* Sign-in links from the Touristplus app land here: hand the session back to the app. */
-(function () {
-  var h = location.hash || '';
-  var ok = /access_token=/.test(h), bad = /error_description=/.test(h);
-  if (!ok && !bad) return;
-  document.addEventListener('DOMContentLoaded', function () {
-    var d = document.createElement('div');
-    d.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#0E3B43;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;font-family:system-ui,-apple-system,sans-serif;text-align:center;padding:24px';
-    var t = document.createElement('div'); t.style.cssText = 'font-size:26px;font-weight:800'; t.textContent = 'Touristplus';
-    var m = document.createElement('div'); m.style.cssText = 'font-size:18px;line-height:1.7';
-    d.appendChild(t); d.appendChild(m);
-    if (ok) {
-      m.innerHTML = 'تم تأكيد الإيميل ✅<br>Email confirmed';
-      var a = document.createElement('a'); a.href = 'touristplus://auth-callback?' + h.slice(1);
-      a.style.cssText = 'background:#F2994A;color:#fff;padding:14px 30px;border-radius:14px;font-weight:700;text-decoration:none;font-size:17px';
-      a.textContent = 'افتح التطبيق · Open the app';
-      d.appendChild(a);
-    } else {
-      m.innerHTML = 'الرابط منتهي أو مستخدم — اطلب رابط جديد من التطبيق<br>This link has expired — request a new one in the app';
-    }
-    document.body.appendChild(d);
-  });
-})();
+/* Older sign-in links land here with tokens: hand them back to the app. */
+(function(){var h=location.hash||'';var ok=/access_token=/.test(h),bad=/error_description=/.test(h);if(!ok&&!bad)return;
+document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');d.style.cssText='position:fixed;inset:0;z-index:99;background:#0B3D91;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:24px;font-family:inherit';
+var m=document.createElement('div');m.style.fontSize='18px';m.textContent=ok?'تم تأكيد الإيميل ✅':'الرابط منتهي — اطلب رمز جديد من التطبيق';d.appendChild(m);
+if(ok){var a=document.createElement('a');a.href='touristplus://auth-callback?'+h.slice(1);a.className='btn white';a.textContent='افتح التطبيق';d.appendChild(a);}document.body.appendChild(d);});})();
 </script>
 </head>
 <body>
-<div dir="rtl" style="font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #10272B; background: #F6F2EA; width: 100%; line-height: 1.6">
+<header><div class="wrap"><a href="/" class="logo " dir="ltr"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0B3D91"/><text x="32" y="36" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="27" fill="#fff">T+</text><rect x="19" y="44" width="26" height="3" rx="1.5" fill="#C0392B"/></svg><span class="word"><b>TheTourist</b><i>Plus</i></span></a><nav><a href="#how">كيف يعمل</a><a href="#travelers">للمسافرين</a><a href="#partners">للشركاء</a><a href="#faq">الأسئلة الشائعة</a></nav><span class="hspace"></span>
+<div class="hact"><a class="lang" href="/en.html">English</a><a class="btn ghost" href="https://partners.thetouristplus.com">دخول الشركاء</a><a class="btn primary" href="#download">حمّل التطبيق</a></div></div></header>
 
-<header style="background: #F6F2EA; border-bottom: 1px solid #E6E0D4">
-<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0E3B43">
-<span style="width: 40px; height: 40px; border-radius: 12px; background: #0E3B43; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-</span>
-<span style="font-size: 22px; font-weight: 700; letter-spacing: 0.2px" dir="ltr">Touristplus</span>
-</a>
-<nav aria-label="القائمة الرئيسية" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 16px; font-weight: 500">
-<a href="#how" style="text-decoration: none; padding: 10px 0">كيف يعمل</a>
-<a href="#travelers" style="text-decoration: none; padding: 10px 0">للمسافرين</a>
-<a href="#agencies" style="text-decoration: none; padding: 10px 0">لمكاتب السفر</a>
-<a href="#faq" style="text-decoration: none; padding: 10px 0">الأسئلة الشائعة</a>
-</nav>
-<div style="display: flex; align-items: center; gap: 12px">
-<a href="/en.html" style="text-decoration: none; font-weight: 600; padding: 10px 14px; border: 1px solid #E6E0D4; border-radius: 999px; background: #FFFFFF" lang="en">English</a>
-<a href="#download" style="text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 12px; background: #0E3B43; color: #FFFFFF">حمّل التطبيق</a>
-</div>
-</div>
-</header>
+<div class="hero"><div class="wrap">
+<div><span class="eyebrow">أول منصة مناقصات سفر في الكويت</span>
+<h1>اطلب رحلتك،<br><span>وشركاؤنا يوفّرون أفضل الأسعار.</span></h1><div class="redline"></div>
+<p class="lead">بدل ما تتصل على أكثر من مكتب، اكتب تفاصيل رحلتك مرة وحدة، وتوصلك عروض من شركاء سفر موثّقين في الكويت. قارن السعر والفندق والطيران واختر الأنسب لك.</p>
+<div class="ctas"><span class="store"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.6-3.9zM14 5.3c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3z"/></svg><span><small>قريباً على</small><b>App Store</b></span></span><a class="btn outline-w" style="height:52px" href="#partners">دخول الشركاء</a></div>
+<div class="trust"><span>شركاء موثّقون</span><span>بدون رسوم على المسافر</span><span>محادثة مباشرة مع الشريك</span></div><div class="tag">TRAVEL · ENJOY · RELAX</div></div>
+<div class="phone"><div class="screen"><div class="sbar"><b>رحلة إسطنبول</b><small>٦ ليالي · شخصين وطفل</small></div><div class="sbody"><span class="pill">٣ عروض وصلت</span><div class="offer best"><div><h4>شريك (أ)<span class=badge>أفضل سعر</span></h4><p>طيران + فندق ٥ نجوم + توصيل</p></div><div class="price">790 د.ك</div></div><div class="offer"><div><h4>شريك (ب)</h4><p>طيران + فندق ٥ نجوم + توصيل</p></div><div class="price">845 د.ك</div></div><div class="offer"><div><h4>شريك (ج)</h4><p>طيران + فندق + جولة بمرشد عربي</p></div><div class="price">910 د.ك</div></div></div></div></div>
+</div></div>
 
-<section id="top" style="background: #0E3B43; color: #FFFFFF; overflow: hidden">
-<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px 80px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-<span style="align-self: flex-start; background: rgba(242,166,90,0.16); color: #F2A65A; font-weight: 600; font-size: 15px; padding: 6px 14px; border-radius: 999px">أول منصة مناقصات سفر في الكويت</span>
-<h1 style="margin: 0; font-size: 52px; line-height: 1.25; font-weight: 700">اطلب رحلتك،<br><span style="color: #F2A65A">وشركاؤنا يوفّرون<br>أفضل الأسعار.</span></h1>
-<p style="margin: 0; font-size: 19px; color: #D3E3E4; max-width: 520px">بدل ما تتصل على أكثر من مكتب، اكتب تفاصيل رحلتك مرة وحدة، ووصلك عروض من مكاتب سفر مرخّصة في الكويت. قارن السعر والفندق والطيران واحجز من مكان واحد.</p>
-<ul style="list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 16px; color: #E9F1F1">
-<li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>مكاتب مرخّصة وموثّقة</li>
-<li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بدون رسوم على المسافر</li>
-<li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>دفع آمن بكي نت</li>
-</ul>
-</div>
+<section id="how" class="alt"><div class="wrap center"><div class="kicker">كيف يعمل</div><h2>أربع خطوات وتوصل لأفضل سعر</h2>
+<div class="steps" style="text-align:start"><div class="card"><div class="num">١</div><h3>اكتب طلبك</h3><p>الوجهة، التواريخ، عدد المسافرين، الميزانية، وتفضيلاتك للفندق والطيران.</p></div><div class="card"><div class="num">٢</div><h3>الشركاء يقدّمون عروضهم</h3><p>طلبك يوصل لكل الشركاء الموثّقين، وكل شريك يرسل أفضل باقة عنده خلال المدة اللي تحددها.</p></div><div class="card"><div class="num">٣</div><h3>قارن جنب بعض</h3><p>السعر، البرنامج، الخدمات المشمولة، وتقييم الشريك — كلها في شاشة وحدة.</p></div><div class="card"><div class="num">٤</div><h3>اقبل العرض واحجز</h3><p>اختر العرض المناسب، ويتواصل معك الشريك مباشرة لتأكيد الحجز.</p></div></div></div></section>
 
-<form aria-labelledby="quick-title" style="flex: 1 1 400px; min-width: 0; background: #FFFFFF; color: #10272B; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 24px 60px rgba(0,0,0,0.25)">
-<h2 id="quick-title" style="margin: 0; font-size: 22px; font-weight: 700">ابدأ طلبك الحين</h2>
-<p style="margin: -8px 0 0; font-size: 15px; color: #5E6E70">ياخذ أقل من دقيقة، والعروض توصلك على التطبيق.</p>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">الوجهة
-<input type="text" placeholder="مثال: إسطنبول، لندن، مكة المكرمة" style="font-size: 16px; padding: 14px 16px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5; color: #10272B">
-</label>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">تاريخ المغادرة
-<input type="date" style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5; color: #10272B">
-</label>
-<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">تاريخ العودة
-<input type="date" style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5; color: #10272B">
-</label>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">المسافرين
-<select style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5; color: #10272B">
-<option>شخصين</option><option>شخص واحد</option><option>عائلة (٣–٥)</option><option>مجموعة (٦+)</option>
-</select>
-</label>
-<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">نوع الرحلة
-<select style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5; color: #10272B">
-<option>سياحة</option><option>عمرة</option><option>شهر عسل</option><option>عمل</option><option>مجموعة</option>
-</select>
-</label>
-</div>
-<a href="#download" style="text-decoration: none; display: flex; align-items: center; justify-content: center; font-family: inherit; font-size: 18px; font-weight: 700; min-height: 54px; border: 0; border-radius: 14px; background: #F2A65A; color: #0E3B43; cursor: pointer">اطلب العروض مجاناً</a>
-<p style="margin: 0; font-size: 13px; color: #5E6E70; text-align: center">بنكمل التفاصيل (الفندق، الميزانية، الخدمات) في الخطوة الجاية.</p>
-</form>
-</div>
-</section>
+<section id="travelers"><div class="wrap split">
+<div><div class="kicker">للمسافرين</div><h2>وفّر وقتك وفلوسك</h2><p class="sub">عروض متعددة من شركائنا تعني سعر أفضل لك، بدون مكالمات ولا مشاوير.</p><div class="feats"><div class="feat"><h3>أفضل سعر في السوق</h3><p>شركاؤنا يتنافسون بأفضل عروضهم على طلبك.</p></div><div class="feat"><h3>مقارنة واضحة</h3><p>كل العروض جنب بعض بنفس التفاصيل.</p></div><div class="feat"><h3>شركاء موثّقون فقط</h3><p>نتحقق من ترخيص كل شريك قبل تفعيله.</p></div><div class="feat"><h3>محادثة داخل التطبيق</h3><p>تواصل مع الشريك وكل شي موثّق في مكان واحد.</p></div></div></div>
+<div class="center"><h3 style="margin:0 0 6px">مهما كانت رحلتك</h3><div class="chips"><span class="chip">سياحة عائلية</span><span class="chip">عمرة</span><span class="chip">شهر عسل</span><span class="chip">رحلات عمل</span><span class="chip">مجموعات وشركات</span><span class="chip">مدارس وأندية</span></div></div>
+</div></section>
 
-<section id="how" style="padding: 88px 24px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 8px; max-width: 640px">
-<span style="color: #16707A; font-weight: 700; font-size: 15px">كيف يعمل</span>
-<h2 style="margin: 0; font-size: 38px; line-height: 1.3; font-weight: 700">أربع خطوات وتوصل لأفضل سعر</h2>
-</div>
-<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
-<li style="background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #0E3B43; color: #F2A65A; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">١</span>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">اكتب طلبك</h3>
-<p style="margin: 0; color: #5E6E70; font-size: 16px">الوجهة، التواريخ، عدد المسافرين، الميزانية، وتفضيلاتك للفندق والطيران.</p>
-</li>
-<li style="background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #0E3B43; color: #F2A65A; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">٢</span>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">المكاتب تقدّم عروضها</h3>
-<p style="margin: 0; color: #5E6E70; font-size: 16px">طلبك يوصل لكل المكاتب الموثّقة، وكل مكتب يرسل أفضل باقة عنده خلال مدة تحددها أنت.</p>
-</li>
-<li style="background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #0E3B43; color: #F2A65A; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">٣</span>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">قارن جنب بعض</h3>
-<p style="margin: 0; color: #5E6E70; font-size: 16px">السعر، البرنامج، الخدمات المشمولة، وتقييم المكتب — كلها في شاشة وحدة.</p>
-</li>
-<li style="background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #F2A65A; color: #0E3B43; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">٤</span>
-<h3 style="margin: 0; font-size: 20px; font-weight: 700">احجز وادفع بأمان</h3>
-<p style="margin: 0; color: #5E6E70; font-size: 16px">اختر العرض اللي يناسبك وادفع بكي نت أو بالبطاقة من داخل المنصة.</p>
-</li>
-</ol>
-</div>
-</section>
+<section id="partners" class="dark"><div class="wrap split">
+<div><div class="kicker">للشركاء</div><h2>عملاء جدد بدون ميزانية تسويق</h2><p class="sub">استقبل طلبات مسافرين جاهزين للحجز، وقدّم عرضك من لوحة الشركاء. تفاصيل الشراكة نوضّحها لك عند التسجيل.</p><div class="feats"><div class="feat"><h3>عملاء جاهزين للحجز</h3><p>طلبات بتفاصيل واضحة: الوجهة، التواريخ، والميزانية.</p></div><div class="feat"><h3>لوحة شركاء متكاملة</h3><p>تابع الطلبات المفتوحة والعروض والحجوزات المؤكدة.</p></div><div class="feat"><h3>ثقة أعلى</h3><p>شارة الشريك الموثّق والتقييمات تميّزك عن غيرك.</p></div><div class="feat"><h3>محادثة مباشرة</h3><p>تواصل مع المسافر من داخل اللوحة.</p></div></div>
+<div class="ctas"><a class="btn white" href="https://partners.thetouristplus.com">دخول الشركاء</a><a class="btn outline-w" href="mailto:info@thetouristplus.com?subject=تسجيل شريك سفر">سجّل كشريك</a></div></div>
+<div class="dash"><div style="display:flex;justify-content:space-between;align-items:center"><a href="/" class="logo light" dir="ltr"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0B3D91"/><text x="32" y="36" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="27" fill="#fff">T+</text><rect x="19" y="44" width="26" height="3" rx="1.5" fill="#C0392B"/></svg><span class="word"><b>TheTourist</b><i>Plus</i></span></a><span class="tagr">Partners</span></div><div class="drow"><span>رحلة إسطنبول<small>٦ ليالي · شخصين وطفل</small></span><span class="tagr new">NEW</span></div><div class="drow"><span>عمرة<small>للمسافرين</small></span><span class="tagr">٣ عروض وصلت</span></div><div class="drow"><span>شهر عسل<small>للمسافرين</small></span><span class="tagr">أفضل سعر</span></div></div>
+</div></section>
 
-<section id="travelers" style="padding: 0 24px 88px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="color: #16707A; font-weight: 700; font-size: 15px">للمسافرين</span>
-<h2 style="margin: 0; font-size: 38px; line-height: 1.3; font-weight: 700">وفّر وقتك وفلوسك</h2>
-<p style="margin: 0; font-size: 18px; color: #5E6E70">عروض متعددة من شركائنا تعني سعر أفضل لك، بدون مكالمات ولا مشاوير.</p>
-<ul style="list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; font-size: 17px">
-<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16707A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>أفضل سعر في السوق</strong> — شركاؤنا يقدّمون أفضل عروضهم لطلبك.</span></li>
-<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16707A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>مقارنة واضحة</strong> — كل العروض جنب بعض.</span></li>
-<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16707A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>مكاتب مرخّصة فقط</strong> — نتحقق من ترخيص وزارة التجارة لكل مكتب.</span></li>
-<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16707A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>محادثة وحجز داخل المنصة</strong> — كل شي موثّق في مكان واحد.</span></li>
-</ul>
-</div>
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-weight: 700; color: #5E6E70; font-size: 15px">مثال توضيحي: ٣ عروض على رحلة إسطنبول — ٦ ليالي، شخصين وطفل</p>
-<div style="background: #FFFFFF; border: 2px solid #F2A65A; border-radius: 18px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
-<div><p style="margin: 0; font-weight: 700; font-size: 17px">شريك (أ)</p><p style="margin: 0; color: #5E6E70; font-size: 14px">طيران + فندق ٥ نجوم + توصيل</p></div>
-<div style="text-align: left"><p style="margin: 0; font-size: 24px; font-weight: 700; color: #0E3B43">790 د.ك</p><span style="background: #FCEBDD; color: #8A4A14; font-size: 13px; font-weight: 700; padding: 2px 10px; border-radius: 999px">أفضل سعر</span></div>
-</div>
-<div style="background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 18px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
-<div><p style="margin: 0; font-weight: 700; font-size: 17px">شريك (ب)</p><p style="margin: 0; color: #5E6E70; font-size: 14px">طيران + فندق ٥ نجوم + توصيل</p></div>
-<p style="margin: 0; font-size: 24px; font-weight: 700; color: #0E3B43">845 د.ك</p>
-</div>
-<div style="background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 18px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
-<div><p style="margin: 0; font-weight: 700; font-size: 17px">شريك (ج)</p><p style="margin: 0; color: #5E6E70; font-size: 14px">طيران + فندق + جولة مع مرشد عربي</p></div>
-<p style="margin: 0; font-size: 24px; font-weight: 700; color: #0E3B43">910 د.ك</p>
-</div>
-</div>
-</div>
-</section>
+<section id="faq"><div class="wrap"><h2 class="center">الأسئلة الشائعة</h2><div class="faq"><details><summary>هل الخدمة مجانية للمسافر؟</summary><p>نعم. إرسال الطلب ومقارنة العروض مجاني بالكامل، وتدفع فقط قيمة الرحلة اللي تختارها.</p></details><details><summary>كيف أعرف إن الشريك موثوق؟</summary><p>ما نفعّل أي شريك إلا بعد التحقق من ترخيصه، وتشوف تقييم كل شريك على عرضه.</p></details><details><summary>كم مدة استقبال العروض؟</summary><p>أنت تحددها عند إرسال الطلب: ٢٤ أو ٤٨ أو ٧٢ ساعة.</p></details><details><summary>هل أقدر أتواصل مع الشريك قبل الحجز؟</summary><p>أكيد، فيه محادثة داخل التطبيق مع كل شريك قدّم لك عرض.</p></details><details><summary>كيف يتم الحجز والدفع؟</summary><p>بعد ما تقبل العرض، يتواصل معك الشريك مباشرة لتأكيد الحجز وإتمام الدفع.</p></details></div></div></section>
 
-<section aria-labelledby="types-title" style="background: #FFFFFF; border-top: 1px solid #E6E0D4; border-bottom: 1px solid #E6E0D4; padding: 56px 24px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; align-items: center; text-align: center">
-<h2 id="types-title" style="margin: 0; font-size: 28px; font-weight: 700">مهما كانت رحلتك</h2>
-<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; font-size: 17px; font-weight: 600">
-<li style="padding: 12px 22px; border-radius: 999px; background: #F6F2EA; border: 1px solid #E6E0D4">سياحة عائلية</li>
-<li style="padding: 12px 22px; border-radius: 999px; background: #F6F2EA; border: 1px solid #E6E0D4">عمرة</li>
-<li style="padding: 12px 22px; border-radius: 999px; background: #F6F2EA; border: 1px solid #E6E0D4">شهر عسل</li>
-<li style="padding: 12px 22px; border-radius: 999px; background: #F6F2EA; border: 1px solid #E6E0D4">رحلات عمل</li>
-<li style="padding: 12px 22px; border-radius: 999px; background: #F6F2EA; border: 1px solid #E6E0D4">مجموعات وشركات</li>
-<li style="padding: 12px 22px; border-radius: 999px; background: #F6F2EA; border: 1px solid #E6E0D4">مدارس وأندية</li>
-</ul>
-</div>
-</section>
+<section id="download" style="padding-top:0"><div class="wrap"><div class="cta"><div><h2>رحلتك الجاية تبدأ من جوالك</h2><p>حمّل تطبيق TheTouristPlus وأرسل أول طلب.</p></div><span class="store"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.2 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.6-1-2.6-3.9zM14 5.3c.7-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3z"/></svg><span><small>قريباً على</small><b>App Store</b></span></span></div></div></section>
 
-<section id="agencies" style="padding: 88px 24px">
-<div style="max-width: 1200px; margin: 0 auto; background: #0E3B43; color: #FFFFFF; border-radius: 28px; padding: 48px 40px; display: flex; flex-wrap: wrap; gap: 40px">
-<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<span style="color: #F2A65A; font-weight: 700; font-size: 15px">لمكاتب السفر</span>
-<h2 style="margin: 0; font-size: 36px; line-height: 1.3; font-weight: 700">عملاء جدد بدون ميزانية تسويق</h2>
-<p style="margin: 0; font-size: 18px; color: #D3E3E4">استقبل طلبات مسافرين جاهزين للحجز، وقدّم عرضك من مكانك. وتفاصيل الشراكة نوضّحها لك عند التسجيل.</p>
-<a href="#register" style="align-self: flex-start; text-decoration: none; font-weight: 700; font-size: 17px; padding: 14px 24px; border-radius: 14px; background: #F2A65A; color: #0E3B43">سجّل مكتبك</a>
-</div>
-<div style="flex: 1 1 380px; min-width: 0">
-<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 16px"><li style="display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px"><svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong style="color: #FFFFFF">عملاء جاهزين للحجز</strong><br><span style="color: #D3E3E4">طلبات مسافرين بتفاصيل واضحة: الوجهة، التواريخ، والميزانية.</span></span></li><li style="display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px"><svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong style="color: #FFFFFF">لوحة متابعة للمكتب</strong><br><span style="color: #D3E3E4">تابع الطلبات المفتوحة والعروض اللي أرسلتها والحجوزات المؤكدة.</span></span></li><li style="display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px"><svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong style="color: #FFFFFF">ثقة أعلى من العملاء</strong><br><span style="color: #D3E3E4">شارة المكتب الموثّق والتقييمات تميّز مكتبك عن غيره.</span></span></li><li style="display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px"><svg aria-hidden="true" style="flex: none; margin-top: 3px" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A65A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong style="color: #FFFFFF">دفع آمن داخل المنصة</strong><br><span style="color: #D3E3E4">الحجز والدفع يتمّون من خلال Touristplus بشكل موثّق.</span></span></li></ul>
-</div>
-</div>
-</section>
-
-<section id="register" aria-labelledby="reg-title" style="padding: 0 24px 88px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h2 id="reg-title" style="margin: 0; font-size: 32px; font-weight: 700">سجّل اهتمام مكتبك</h2>
-<p style="margin: 0; font-size: 17px; color: #5E6E70">نتواصل معك لتوثيق الترخيص وتفعيل حسابك قبل الإطلاق.</p>
-</div>
-<form action="mailto:info@thetouristplus.com?subject=%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%85%D9%83%D8%AA%D8%A8%20%D8%B3%D9%81%D8%B1" method="post" enctype="text/plain" style="flex: 1 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E6E0D4; border-radius: 22px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">اسم المكتب
-<input name="agency" required type="text" style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5">
-</label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">رقم الترخيص التجاري
-<input name="license" required type="text" style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5">
-</label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">اسم المسؤول
-<input name="contact" required type="text" style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5">
-</label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #3C4E50">رقم الجوال
-<input name="mobile" required type="tel" dir="ltr" placeholder="+965" style="font-size: 16px; padding: 13px 14px; border: 1px solid #D9D2C3; border-radius: 12px; background: #FBF9F5; text-align: right">
-</label>
-<button type="submit" style="font-family: inherit; font-size: 17px; font-weight: 700; min-height: 52px; border: 0; border-radius: 14px; background: #0E3B43; color: #FFFFFF; cursor: pointer">أرسل الطلب</button>
-</form>
-</div>
-</section>
-
-<section id="faq" style="background: #FFFFFF; border-top: 1px solid #E6E0D4; padding: 88px 24px">
-<div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
-<h2 style="margin: 0; font-size: 36px; font-weight: 700; text-align: center">الأسئلة الشائعة</h2>
-<details open style="border: 1px solid #E6E0D4; border-radius: 16px; padding: 18px 22px; background: #FBF9F5">
-<summary style="font-weight: 700; font-size: 18px; cursor: pointer">هل الخدمة مجانية للمسافر؟</summary>
-<p style="margin: 10px 0 0; color: #5E6E70; font-size: 16px">نعم. إرسال الطلب ومقارنة العروض مجاني بالكامل، وتدفع فقط قيمة الرحلة اللي تختارها.</p>
-</details>
-<details style="border: 1px solid #E6E0D4; border-radius: 16px; padding: 18px 22px; background: #FBF9F5">
-<summary style="font-weight: 700; font-size: 18px; cursor: pointer">كيف أعرف إن المكتب موثوق؟</summary>
-<p style="margin: 10px 0 0; color: #5E6E70; font-size: 16px">ما نفعّل أي مكتب إلا بعد التحقق من ترخيصه من وزارة التجارة، وتشوف تقييمات المسافرين السابقين على كل عرض.</p>
-</details>
-<details style="border: 1px solid #E6E0D4; border-radius: 16px; padding: 18px 22px; background: #FBF9F5">
-<summary style="font-weight: 700; font-size: 18px; cursor: pointer">كم مدة استقبال العروض؟</summary>
-<p style="margin: 10px 0 0; color: #5E6E70; font-size: 16px">أنت تحددها عند إرسال الطلب: ٢٤ أو ٤٨ أو ٧٢ ساعة.</p>
-</details>
-<details style="border: 1px solid #E6E0D4; border-radius: 16px; padding: 18px 22px; background: #FBF9F5">
-<summary style="font-weight: 700; font-size: 18px; cursor: pointer">هل أقدر أتواصل مع المكتب قبل الحجز؟</summary>
-<p style="margin: 10px 0 0; color: #5E6E70; font-size: 16px">أكيد، فيه محادثة داخل التطبيق مع كل مكتب قدّم لك عرض.</p>
-</details>
-<details style="border: 1px solid #E6E0D4; border-radius: 16px; padding: 18px 22px; background: #FBF9F5">
-<summary style="font-weight: 700; font-size: 18px; cursor: pointer">كيف أدفع؟</summary>
-<p style="margin: 10px 0 0; color: #5E6E70; font-size: 16px">بكي نت أو بالبطاقة الائتمانية من داخل المنصة.</p>
-</details>
-</div>
-</section>
-
-<section id="download" style="padding: 88px 24px">
-<div style="max-width: 1200px; margin: 0 auto; background: #F2A65A; border-radius: 28px; padding: 48px 40px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 8px; color: #0E3B43">
-<h2 style="margin: 0; font-size: 36px; line-height: 1.3; font-weight: 700">رحلتك الجاية تبدأ من جوالك</h2>
-<p style="margin: 0; font-size: 18px; color: #2C4447">حمّل تطبيق <span dir="ltr">Touristplus</span> وأرسل أول طلب.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#download" aria-disabled="true" style="display: flex; align-items: center; gap: 10px; text-decoration: none; background: #0E3B43; color: #FFFFFF; padding: 12px 20px; border-radius: 14px; min-height: 56px; box-sizing: border-box">
-<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
-<span style="display: flex; flex-direction: column; line-height: 1.2"><span style="font-size: 12px; color: #C9DBDC">قريباً على</span><span style="font-size: 18px; font-weight: 700" dir="ltr">App Store</span></span>
-</a>
-<a href="#download" aria-disabled="true" style="display: flex; align-items: center; gap: 10px; text-decoration: none; background: rgba(14,59,67,0.12); color: #0E3B43; padding: 12px 20px; border-radius: 14px; min-height: 56px; box-sizing: border-box; border: 1.5px solid #0E3B43">
-<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E3B43" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
-<span style="display: flex; flex-direction: column; line-height: 1.2"><span style="font-size: 12px">قريباً على</span><span style="font-size: 18px; font-weight: 700" dir="ltr">Google Play</span></span>
-</a>
-</div>
-</div>
-</section>
-
-<footer style="background: #0E3B43; color: #D3E3E4; padding: 48px 24px 32px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px">
-<div style="display: flex; flex-direction: column; gap: 8px; max-width: 340px">
-<span style="font-size: 22px; font-weight: 700; color: #FFFFFF" dir="ltr">Touristplus</span>
-<p style="margin: 0; font-size: 15px">اطلب رحلتك، وشركاؤنا يوفّرون أفضل الأسعار.</p>
-</div>
-<nav aria-label="روابط الموقع" style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 15px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="color: #FFFFFF; font-weight: 700">المنصة</span>
-<a href="#how" style="color: #D3E3E4; text-decoration: none">كيف يعمل</a>
-<a href="#agencies" style="color: #D3E3E4; text-decoration: none">لمكاتب السفر</a>
-<a href="#faq" style="color: #D3E3E4; text-decoration: none">الأسئلة الشائعة</a>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="color: #FFFFFF; font-weight: 700">قانوني</span>
-<a href="/privacy.html" style="color: #D3E3E4; text-decoration: none">سياسة الخصوصية</a>
-<a href="#" style="color: #D3E3E4; text-decoration: none">الشروط والأحكام</a>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="color: #FFFFFF; font-weight: 700">تواصل معنا</span>
-<a href="mailto:info@thetouristplus.com" style="color: #D3E3E4; text-decoration: none" dir="ltr">info@thetouristplus.com</a>
-<a href="https://wa.me/96598798707" style="color: #D3E3E4; text-decoration: none">واتساب <span dir="ltr">+965 98798707</span></a>
-</div>
-</nav>
-</div>
-<p style="margin: 0; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 20px; font-size: 14px; color: #A9C3C5">© ٢٠٢٦ <span dir="ltr">Touristplus</span>. جميع الحقوق محفوظة.</p>
-</div>
-</footer>
-
-</div>
-</body>
-</html>
+<footer><div class="wrap"><div class="fgrid">
+<div><a href="/" class="logo light" dir="ltr"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0B3D91"/><text x="32" y="36" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="27" fill="#fff">T+</text><rect x="19" y="44" width="26" height="3" rx="1.5" fill="#C0392B"/></svg><span class="word"><b>TheTourist</b><i>Plus</i></span></a><p style="color:#94A3B8;margin-top:14px">اطلب رحلتك، وشركاؤنا يوفّرون أفضل الأسعار.</p></div>
+<div><h4>المنصة</h4><a href="#how">كيف يعمل</a><a href="#partners">للشركاء</a><a href="#faq">الأسئلة الشائعة</a></div>
+<div><h4>قانوني</h4><a href="/privacy.html">سياسة الخصوصية</a><a href="https://partners.thetouristplus.com">دخول الشركاء</a></div>
+<div><h4>تواصل معنا</h4><a href="mailto:info@thetouristplus.com">info@thetouristplus.com</a><a href="https://wa.me/96598798707" dir="ltr">واتساب +965 98798707</a></div>
+</div><div class="fbot">© ٢٠٢٦ TheTouristPlus. جميع الحقوق محفوظة.</div></div></footer>
+</body></html>
