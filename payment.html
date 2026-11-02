@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheTouristPlus — الدفع</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B3D91">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0B3D91;--red:#C0392B;--ink:#0F172A;--mist:#F1F5F9;--muted:#64748B}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--mist);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;color:var(--ink);padding:20px}
+.card{background:#fff;border-radius:24px;padding:36px 28px;max-width:420px;width:100%;text-align:center;box-shadow:0 20px 50px rgba(15,23,42,.08)}
+.mark{width:56px;height:56px;margin:0 auto 18px}
+.icon{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;font-size:38px;color:#fff}
+.ok{background:#1F8A4C}.bad{background:var(--red)}
+h1{font-size:24px;margin:0 0 8px}p{color:var(--muted);margin:0 0 6px;line-height:1.7}
+.btn{display:block;margin-top:22px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:14px}
+.en{direction:ltr;font-size:14px;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="card">
+  <svg class="mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#0B3D91"/><text x="32" y="36" text-anchor="middle" font-family="Arial" font-weight="700" font-size="27" fill="#fff">T+</text><rect x="19" y="44" width="26" height="3" rx="1.5" fill="#C0392B"/></svg>
+  <div id="icon" class="icon"></div>
+  <h1 id="title"></h1>
+  <p id="msg"></p>
+  <a id="back" class="btn" href="touristplus://">العودة إلى التطبيق</a>
+  <p class="en" id="en"></p>
+</div>
+<script>
+  var q = new URLSearchParams(location.search), ok = q.get('status') === 'paid', offer = q.get('offer') || '';
+  document.getElementById('icon').className = 'icon ' + (ok ? 'ok' : 'bad');
+  document.getElementById('icon').textContent = ok ? '✓' : '!';
+  document.getElementById('title').textContent = ok ? 'تم الدفع بنجاح' : 'لم تتم عملية الدفع';
+  document.getElementById('msg').textContent = ok
+    ? 'تم تأكيد حجزك، وبيتواصل معك الشريك لإرسال تفاصيل الرحلة.'
+    : 'ما انخصم أي مبلغ. ارجع للتطبيق وجرّب مرة ثانية.';
+  document.getElementById('en').textContent = ok
+    ? 'Payment successful — your booking is confirmed.'
+    : 'Payment was not completed — no amount was charged.';
+  if (/^[0-9a-f-]{36}$/i.test(offer)) document.getElementById('back').href = 'touristplus://offer/' + offer;
+</script>
+</body>
+</html>
