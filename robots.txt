@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /payment.html
+
+Sitemap: https://thetouristplus.com/sitemap.xml
