@@ -112,8 +112,14 @@ footer{background:var(--ink);color:#CBD5E1;padding:56px 0 28px;font-size:15px}
 .wt-card details ul{margin:6px 0 0;padding-inline-start:18px;font-size:14px}
 .wt-card .btn{align-self:flex-start;margin-top:auto}
 .disc{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding:18px 0 36px;max-width:80ch}
+.wt-card.has-pic{padding-top:0;overflow:hidden}
+.wt-pic{margin:0 -18px 4px;position:relative;aspect-ratio:3/2;background:var(--mist)}
+.wt-pic img{width:100%;height:100%;object-fit:cover;display:block}
+.wt-pic figcaption{position:absolute;inset-inline-end:8px;bottom:8px;font-size:11px;background:rgba(15,23,42,.6);color:#fff;padding:2px 8px;border-radius:999px;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wt-pic figcaption a{color:#fff;text-decoration:none}
+nav a[aria-current="page"]{color:var(--blue);font-weight:700}
 </style></head><body>
-<header><div class="wrap"><a href="/en.html" class="logo " dir="ltr"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0B3D91"/><text x="32" y="36" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="27" fill="#fff">T+</text><rect x="19" y="44" width="26" height="3" rx="1.5" fill="#C0392B"/></svg><span class="word"><b>TheTourist</b><i>Plus</i></span></a><nav><a href="/en.html#how">How it works</a><a href="/en.html#travelers">Travelers</a><a href="/en.html#partners">Partners</a><a href="/en.html#faq">FAQ</a></nav><span class="hspace"></span>
+<header><div class="wrap"><a href="/en.html" class="logo " dir="ltr"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#0B3D91"/><text x="32" y="36" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="27" fill="#fff">T+</text><rect x="19" y="44" width="26" height="3" rx="1.5" fill="#C0392B"/></svg><span class="word"><b>TheTourist</b><i>Plus</i></span></a><nav><a href="/when-en.html" aria-current="page">Where to travel?</a><a href="/en.html#how">How it works</a><a href="/en.html#travelers">Travelers</a><a href="/en.html#partners">Partners</a><a href="/en.html#faq">FAQ</a></nav><span class="hspace"></span>
 <div class="hact"><a class="lang" href="/when.html">العربية</a><a class="btn ghost" href="https://partners.thetouristplus.com">Partner login</a><a class="btn primary" href="https://apps.apple.com/app/id6829242133" target="_blank" rel="noopener">Get the app</a></div></div></header>
 <main>
 <section class="wt-hero"><div class="wrap">
@@ -145,7 +151,7 @@ const WT_LANG="en",WT_KEY="sb_publishable_1_BOK-6Esn-7rgJAA2hr5Q_vNEL4vdU",WT_D=
     render();
     if (events[month]) return;
     const m = month;
-    fetch('https://eyuezkeuxobuvakqpwlu.supabase.co/rest/v1/destination_events?select=city,kind,title_ar,title_en,note_ar,note_en&active=eq.true&month=eq.' + m + '&limit=500',
+    fetch('https://eyuezkeuxobuvakqpwlu.supabase.co/rest/v1/destination_events?select=city,kind,title_ar,title_en,note_ar,note_en,image_url,image_credit,image_credit_url&active=eq.true&month=eq.' + m + '&limit=500',
       { headers: { apikey: WT_KEY } })
       .then((r) => (r.ok ? r.json() : []))
       .then((rows) => { events[m] = Array.isArray(rows) ? rows : []; if (m === month) render(); })
@@ -159,10 +165,11 @@ const WT_LANG="en",WT_KEY="sb_publishable_1_BOK-6Esn-7rgJAA2hr5Q_vNEL4vdU",WT_D=
       const pill = s === 0 ? ['p-good', L ? 'وقت ممتاز' : 'Great time'] : s === 2 ? ['p-warn', L ? 'يحتاج انتباه' : 'Take care'] : ['p-fair', L ? 'مقبول' : 'Fair'];
       const strip = M.map((m, i) => { const k = i + 1; return '<span class="' + (d.best.includes(k) ? 'g' : d.caution.includes(k) ? 'c' : '') + (k === month ? ' sel' : '') + '" title="' + esc(m) + '">' + k + '</span>'; }).join('');
       const ev = (events[month] || []).filter((e) => d.cities.includes(e.city));
+      const pic = ev.find((e) => /^https:\/\//.test(e.image_url || ''));
       const famTxt = d.fam === 3 ? (L ? 'مناسبة جداً للعائلات' : 'Great for families') : d.fam === 2 ? (L ? 'مناسبة للعائلات' : 'Good for families') : d.fam === 1 ? (L ? 'مناسبة أكثر للبالغين' : 'Better for adults') : '';
       const ages = L ? d.agesAr : d.agesEn;
       const tips = (L ? d.tipsAr : d.tipsEn) || [];
-      return '<article class="wt-card"><div class="wt-top"><div><h2>' + esc(L ? d.ar : d.en) + '</h2><small>' + esc(L ? d.countryAr : d.country) + '</small></div><span class="pill ' + pill[0] + '">' + pill[1] + '</span></div>' +
+      return '<article class="wt-card' + (pic ? ' has-pic' : '') + '">' + (pic ? '<figure class="wt-pic"><img src="' + esc(pic.image_url) + '" alt="' + esc(L ? pic.title_ar : pic.title_en) + '" loading="lazy" decoding="async" width="800" height="533">' + (pic.image_credit ? '<figcaption>' + (L ? 'صورة: ' : 'Photo: ') + (/^https:\/\//.test(pic.image_credit_url || '') ? '<a href="' + esc(pic.image_credit_url) + '" target="_blank" rel="noopener nofollow">' + esc(pic.image_credit) + '</a>' : esc(pic.image_credit)) + '</figcaption>' : '') + '</figure>' : '') + '<div class="wt-top"><div><h2>' + esc(L ? d.ar : d.en) + '</h2><small>' + esc(L ? d.countryAr : d.country) + '</small></div><span class="pill ' + pill[0] + '">' + pill[1] + '</span></div>' +
         '<div class="strip" aria-hidden="true">' + strip + '</div>' +
         '<div class="meta"><span>' + (L ? 'المدة المقترحة' : 'Suggested stay') + ': <b>' + d.nights[0] + '–' + d.nights[1] + ' ' + (L ? 'ليالي' : 'nights') + '</b></span>' +
         (famTxt ? '<span>' + esc(famTxt) + (ages ? ' · ' + esc(ages) : '') + '</span>' : '') + '</div>' +
