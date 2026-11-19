@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>التحقق من الحجز | TheTouristPlus</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0B3D91;--red:#C0392B;--ink:#0F172A;--muted:#64748B;--line:#E2E8F0;--mist:#F1F5F9;--good:#145A39;--goodbg:#D9F2E6;--bad:#9B2C1F;--badbg:#FBEAE8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:'IBM Plex Sans Arabic',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.7}
+header{background:var(--blue);color:#fff;border-bottom:5px solid var(--red)}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .wrap{display:flex;align-items:center;gap:12px;padding-block:18px}
+.logo{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-weight:800;font-size:19px;direction:ltr}
+header b{font-size:19px;direction:ltr;display:block}header small{color:#C9D8F5}
+main .wrap{padding-block:28px 40px;display:flex;flex-direction:column;gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.status{display:flex;align-items:center;gap:12px}
+.dot{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.ok .dot{background:var(--goodbg);color:var(--good)}.no .dot{background:var(--badbg);color:var(--bad)}
+.status h1{margin:0;font-size:22px;line-height:1.35}.ok h1{color:var(--good)}.no h1{color:var(--bad)}
+.status p{margin:0;color:var(--muted);font-size:14px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:15px}
+dt{color:var(--muted)}dd{margin:0;font-weight:700}
+.mono{font-family:ui-monospace,Menlo,monospace;direction:ltr;unicode-bidi:isolate;letter-spacing:.04em}
+.note{font-size:13px;color:var(--muted)}
+.en{direction:ltr;text-align:left;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">T+</div><div><b>TheTouristPlus</b><small>ذا تورست بلس · التحقق من الحجز</small></div></div></header>
+<main><div class="wrap">
+  <section class="card" id="card" aria-live="polite"><p class="note">جاري التحقق…</p></section>
+  <p class="note">هذه الصفحة تؤكد صحة قسيمة الحجز الصادرة من ذا تورست بلس. لا تعرض أسماء المسافرين أو أي بيانات شخصية. للاستفسار: <span dir="ltr" style="white-space:nowrap">+965 90966777</span></p>
+</div></main>
+<script>
+(function () {
+  var KEY = 'sb_publishable_1_BOK-6Esn-7rgJAA2hr5Q_vNEL4vdU';
+  var q = new URLSearchParams(location.search);
+  var ref = (q.get('r') || '').slice(0, 30), code = (q.get('c') || '').slice(0, 20);
+  var card = document.getElementById('card');
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function day(d) { if (!d) return ''; var x = new Date(String(d).slice(0, 10) + 'T12:00:00'); return x.toLocaleDateString('ar-KW-u-nu-latn', { day: 'numeric', month: 'long', year: 'numeric' }); }
+  var ICON_OK = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+  var ICON_NO = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  function bad() {
+    card.className = 'card no';
+    card.innerHTML = '<div class="status"><div class="dot">' + ICON_NO + '</div><div><h1>ما قدرنا نتحقق من هذا الحجز</h1><p>الرمز غير صحيح أو الحجز غير صالح. تواصل معنا للتأكد.</p></div></div>' +
+      '<p class="en">We could not verify this booking. The code is not valid or the booking is no longer active. Please contact us.</p>';
+  }
+  if (!ref || !code) return bad();
+  fetch('https://eyuezkeuxobuvakqpwlu.supabase.co/rest/v1/rpc/verify_booking', {
+    method: 'POST', headers: { apikey: KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ p_ref: ref, p_code: code })
+  }).then(function (r) { return r.ok ? r.json() : null; }).then(function (b) {
+    if (!b || !b.valid) return bad();
+    card.className = 'card ok';
+    card.innerHTML = '<div class="status"><div class="dot">' + ICON_OK + '</div><div><h1>حجز صحيح ومؤكد</h1><p>صادر من ذا تورست بلس</p></div></div>' +
+      '<dl><dt>رقم الحجز</dt><dd class="mono">' + esc(b.ref) + '</dd>' +
+      '<dt>الوجهة</dt><dd>' + esc(b.destination) + '</dd>' +
+      '<dt>الدخول</dt><dd>' + esc(day(b.check_in)) + '</dd>' +
+      '<dt>الخروج</dt><dd>' + esc(day(b.check_out)) + '</dd>' +
+      '<dt>المسافرون</dt><dd>' + esc(b.travelers) + '</dd></dl>' +
+      '<p class="en">Valid, confirmed booking issued by TheTouristPlus · Ref <span class="mono">' + esc(b.ref) + '</span></p>';
+  }).catch(bad);
+})();
+</script>
+</body>
+</html>
