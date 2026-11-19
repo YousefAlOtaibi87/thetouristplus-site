@@ -10,4 +10,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/"/></url>
   <url><loc>https://thetouristplus.com/privacy.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://thetouristplus.com/terms.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://thetouristplus.com/destinations/istanbul.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/istanbul.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/istanbul-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/istanbul.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/istanbul-en.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/istanbul.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/istanbul-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/istanbul.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/dubai.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/dubai-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/dubai.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/dubai-en.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/dubai.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/dubai-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/dubai.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/georgia.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/georgia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/georgia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/georgia.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/georgia-en.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/georgia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/georgia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/georgia.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/london.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/london.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/london-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/london.html"/></url>
+  <url><loc>https://thetouristplus.com/destinations/london-en.html</loc><lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://thetouristplus.com/destinations/london.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetouristplus.com/destinations/london-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetouristplus.com/destinations/london.html"/></url>
 </urlset>
